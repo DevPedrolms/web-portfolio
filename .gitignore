@@ -1,0 +1,28 @@
+# Ignorar dependências de Node.js (caso use futuramente)
+node_modules/
+
+# Ignorar arquivos de build, cache ou temporários
+dist/
+build/
+temp/
+cache/
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos do editor
+.vscode/
+.idea/
+
+# Ignorar imagens e assets pesados ou não utilizados (se necessário)
+assets/images/large/
+
+# Ignorar banco de dados local (caso tenha arquivos de banco SQLite)
+database/*.db
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar configurações locais
+.env

@@ -1,0 +1,569 @@
+/* Estilizações Gerais  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover,
+form .nexcode-enviar input[type="submit"]:hover {
+  box-shadow: 0px 0px 8px #03fa6e;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* BODY */
+
+body {
+  background-color: #1a1b13;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.Nexcode-button button {
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #03fa6e;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+h2.titulo {
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+}
+
+h2.titulo span {
+  color: #03fa6e;
+}
+
+/* Estilo Cabeçalho */
+
+header,
+header.header-scrolled{
+  transition: all 0.3s ease;
+}
+
+header {
+  padding: 20px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1b13;
+  z-index: 1000;
+}
+
+header.header-scrolled {
+  top: -190px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header > .interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #7d7d7d;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+header nav.menu-desktop ul {
+  list-style-type: none;
+}
+header nav.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 40px;
+}
+
+header .menu-desktop a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.Nexcode-button button:hover {
+  color: #fff;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+/* Estilização Topo do Site */
+
+section.topo-do-site {
+  padding: 140px 4%;
+  padding-top: 160px;
+}
+
+section.topo-do-site .flex {
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+}
+
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: #03fa6e;
+  font-size: 54px;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+  position: relative;
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+/* Estilização "Especialidades" */
+
+section.especialidades {
+  padding: 40px 4%;
+}
+
+.especialidades .flex {
+  gap: 60px;
+}
+
+.especialidades .especialidades-box {
+  color: #fff;
+  padding: 40px;
+  margin-top: 45px;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.especialidades .especialidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffffff54;
+}
+
+.especialidades-box i {
+  font-size: 70px;
+  color: #03fa6e;
+}
+
+.especialidades .especialidades-box h3 {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+/* Estilo Sobre */
+
+section.sobre {
+  padding: 80px 4%;
+}
+
+section.sobre .flex {
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre .img-sobre img {
+  border-radius: 35px;
+}
+
+.sobre .txt-sobre {
+  color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+  color: #03fa6e;
+  display: block;
+}
+.sobre .txt-sobre p {
+  margin: 20px 0;
+  text-align: justify;
+}
+
+.nexcode-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #03fa6e;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* Estilização Portfólio */
+
+section.portfolio {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px #ffffff15;
+  flex-direction: column;
+  gap: 40px;
+}
+
+section.portfolio .flex {
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.portfolio-line {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.img-port {
+  width: 360px;
+  height: 460px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000bb;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.portfolio .flex .Nexcode-button button {
+  display: inline-flex;
+}
+
+/* Estilização Formulário de Contato */
+
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background-color: #0000005d;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: none;
+  max-height: 170px;
+}
+
+form .nexcode-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .nexcode-enviar input[type="submit"] {
+  width: 120px;
+  background-color: #03fa6e;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Estilização Rodapé */
+
+footer {
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+  justify-content: space-between;
+}
+
+footer .line-footer {
+  margin: 5px 0;
+}
+
+.borda {
+  border-top: 2px solid #03fa6e;
+  padding-top: 10px;
+}
+
+footer .line-footer p i {
+  color: #03fa6e;
+  margin: 5px;
+}
+
+footer .line-footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* @MediaQuery */
+
+@media screen and (max-width: 1020px) {
+
+  /* GERAL */
+
+  .flex {
+    flex-direction: column;
+  }
+
+  h2.titulo {
+    font-size: 34px;
+    line-height: 32px;
+  }
+
+  .topo-do-site .flex {
+    flex-direction: column-reverse;
+  }
+
+  /* header */
+
+  header {
+    padding: 0;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .menu-desktop,
+  .Nexcode-button {
+    display: none;
+  }
+
+  /* Menu-mobile */
+
+  .nexcode-open-menu i{
+    color: #03fa6e;
+    padding: 20px;
+    font-size: 34px;
+  }
+
+  .mobile-menu{
+    display: block;
+    background-color: #1a1b13;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+
+  .mobile-menu .nexcode-fechar {
+    padding: 20px 5%;
+  }
+
+  .mobile-menu .nexcode-fechar i{
+    color: #03fa6e;
+    font-size: 30px;
+    
+  }
+
+  .mobile-menu nav ul{
+    list-style-type: none;
+    text-align: right;
+  }
+
+  .mobile-menu nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 4%;
+    display: block;
+  }
+
+  .mobile-menu nav ul li a:hover{
+    background-color: #03fa6e;
+    color: #000;
+
+    
+  }
+
+  .overlay-menu {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor semi-transparente */
+    z-index: 999;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay-menu.active {
+    width: 80%;
+    display: block;
+    opacity: 1;
+  }
+
+  /* topo-do-site */
+
+  section.topo-do-site {
+    padding: 20px 8%;
+    padding-top: 100px;
+  }
+
+  section.topo-do-site .flex {
+    gap: 40px;
+  }
+
+  .topo-do-site h1 {
+    font-size: 32px;
+    line-height: 30px;
+  }
+
+  .topo-do-site .txt-topo-site h1 span{
+    font-size: 36px;    
+  }
+
+  .topo-do-site .img-topo-site img {
+    width: 100%;
+  }
+
+  /* Especialidades */
+
+  section.especialidades {
+    padding: 40px 8%;
+  }
+
+  /* Sobre */
+
+  section.sobre {
+    padding: 80px 8%;
+  }
+
+  .img-sobre img {
+    width: 100%;
+  }
+
+  .sobre .txt-sobre h2 {
+    font-size: 34px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .nexcode-social{
+    text-align: center;
+  }
+
+  .nexcode-social button{
+    margin-bottom: 15px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .nexcode-social button i{
+    font-size: 18px;
+  }
+
+  /* portfolio */
+
+  section.portfolio {
+    padding: 80px 8%;
+  }
+
+  section.portfolio .flex{
+    gap: 60px;
+  }
+
+  .portfolio .flex .portfolio-line{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .portfolio .flex .portfolio-line {
+      width: 100%;
+      max-width: 360px ;
+    }
+
+    .img-port{
+      width: 100%;
+      max-width: 360px;
+    }
+
+  /* rodapé */
+
+  footer .flex{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .line-footer{
+    text-align: center;
+  }
+
+  footer .nexcode-social button {
+    margin-bottom: 15px;
+  }
+}
