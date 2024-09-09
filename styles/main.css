@@ -48,10 +48,18 @@ h2.titulo span {
   color: #03fa6e;
 }
 
+/* BODY PORTFOLIO */
+
+.portfolio-page .portfolio,
+.servicos-page .services,
+.index-page .topo-do-site {
+  padding-top: 135px;
+}
+
 /* Estilo Cabeçalho */
 
 header,
-header.header-scrolled{
+header.header-scrolled {
   transition: all 0.3s ease;
 }
 
@@ -100,15 +108,14 @@ header .menu-desktop a:hover {
   color: #fff;
 }
 
-.mobile-menu{
+.mobile-menu {
   display: none;
 }
 
 /* Estilização Topo do Site */
 
 section.topo-do-site {
-  padding: 140px 4%;
-  padding-top: 160px;
+  padding: 135px 4%;
 }
 
 section.topo-do-site .flex {
@@ -147,6 +154,56 @@ section.topo-do-site .flex {
   }
 }
 
+/* ESTILIZAÇÃO SEÇÃO 1 SERVICOS PAGE */
+section.services {
+
+  margin-bottom: 80px;
+}
+
+section.services .services-txt {
+  padding: 10px 4%;
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.services .services-txt h2 {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.services .services-grid {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 300px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 40px;
+}
+
+.services .services-grid .services-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px;
+  background-color: #1a1b13;
+  text-align: center;
+  justify-content: center;
+  padding: 40px 4%;
+  transition: 0.2s;
+}
+
+.services .services-grid .services-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #ffffff54;
+}
+
+.services .services-grid .services-item h3,
+p {
+  color: #fff;
+}
+
+/* ESTILIZAÇÃO SEÇÃO "SERVICES"  SERVICOS-PAGE */
+
 /* Estilização "Especialidades" */
 
 section.especialidades {
@@ -158,6 +215,7 @@ section.especialidades {
 }
 
 .especialidades .especialidades-box {
+  text-align: center;
   color: #fff;
   padding: 40px;
   margin-top: 45px;
@@ -170,7 +228,7 @@ section.especialidades {
   box-shadow: 0 0 8px #ffffff54;
 }
 
-.especialidades-box i {
+.especialidades-box i, .servicos-page .services .services-grid .services-item i {
   font-size: 70px;
   color: #03fa6e;
 }
@@ -238,13 +296,14 @@ section.portfolio .flex {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  margin: 30px auto;
   gap: 40px;
 }
 
 .portfolio-line {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 40px;
 }
 
 .img-port {
@@ -285,8 +344,8 @@ section.portfolio .flex {
   opacity: 1;
 }
 
-.portfolio .flex .Nexcode-button button {
-  display: inline-flex;
+.portfolio .interface .Nexcode-button {
+  text-align: center;
 }
 
 /* Estilização Formulário de Contato */
@@ -369,7 +428,6 @@ footer .line-footer p a {
 /* @MediaQuery */
 
 @media screen and (max-width: 1020px) {
-
   /* GERAL */
 
   .flex {
@@ -400,13 +458,13 @@ footer .line-footer p a {
 
   /* Menu-mobile */
 
-  .nexcode-open-menu i{
+  .nexcode-open-menu i {
     color: #03fa6e;
     padding: 20px;
     font-size: 34px;
   }
 
-  .mobile-menu{
+  .mobile-menu {
     display: block;
     background-color: #1a1b13;
     height: 100vh;
@@ -423,18 +481,17 @@ footer .line-footer p a {
     padding: 20px 5%;
   }
 
-  .mobile-menu .nexcode-fechar i{
+  .mobile-menu .nexcode-fechar i {
     color: #03fa6e;
     font-size: 30px;
-    
   }
 
-  .mobile-menu nav ul{
+  .mobile-menu nav ul {
     list-style-type: none;
     text-align: right;
   }
 
-  .mobile-menu nav ul li a{
+  .mobile-menu nav ul li a {
     color: #fff;
     font-size: 20px;
     font-weight: 300;
@@ -442,11 +499,9 @@ footer .line-footer p a {
     display: block;
   }
 
-  .mobile-menu nav ul li a:hover{
+  .mobile-menu nav ul li a:hover {
     background-color: #03fa6e;
     color: #000;
-
-    
   }
 
   .overlay-menu {
@@ -469,13 +524,16 @@ footer .line-footer p a {
 
   /* topo-do-site */
 
-  section.topo-do-site {
+  section.topo-do-site,
+  .servicos-page section.services,
+  .portfolio-page .portfolio {
     padding: 20px 8%;
     padding-top: 100px;
   }
 
   section.topo-do-site .flex {
     gap: 40px;
+    flex-direction: column-reverse;
   }
 
   .topo-do-site h1 {
@@ -483,8 +541,8 @@ footer .line-footer p a {
     line-height: 30px;
   }
 
-  .topo-do-site .txt-topo-site h1 span{
-    font-size: 36px;    
+  .topo-do-site .txt-topo-site h1 span {
+    font-size: 36px;
   }
 
   .topo-do-site .img-topo-site img {
@@ -495,6 +553,10 @@ footer .line-footer p a {
 
   section.especialidades {
     padding: 40px 8%;
+  }
+
+  .especialidades .flex {
+    gap: 0px ;
   }
 
   /* Sobre */
@@ -513,17 +575,17 @@ footer .line-footer p a {
     text-align: center;
   }
 
-  .nexcode-social{
+  .nexcode-social {
     text-align: center;
   }
 
-  .nexcode-social button{
+  .nexcode-social button {
     margin-bottom: 15px;
     width: 50px;
     height: 50px;
   }
 
-  .nexcode-social button i{
+  .nexcode-social button i {
     font-size: 18px;
   }
 
@@ -533,33 +595,33 @@ footer .line-footer p a {
     padding: 80px 8%;
   }
 
-  section.portfolio .flex{
+  section.portfolio .flex {
     gap: 60px;
   }
 
-  .portfolio .flex .portfolio-line{
-      flex-direction: column;
-      align-items: center;
-    }
+  .portfolio .flex .portfolio-line {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .portfolio .flex .portfolio-line {
-      width: 100%;
-      max-width: 360px ;
-    }
+  .portfolio .flex .portfolio-line {
+    width: 100%;
+    max-width: 360px;
+  }
 
-    .img-port{
-      width: 100%;
-      max-width: 360px;
-    }
+  .img-port {
+    width: 100%;
+    max-width: 360px;
+  }
 
   /* rodapé */
 
-  footer .flex{
+  footer .flex {
     flex-direction: column;
     gap: 30px;
   }
 
-  footer .line-footer{
+  footer .line-footer {
     text-align: center;
   }
 
